@@ -1,0 +1,15 @@
+﻿<prism:PrismApplication x:Class="HandyUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Geometry x:Key="MessengerGeometry">M13,23.093v-3.141C7.034,20.524,2,16.26,2,11c0-4.963,4.486-9,10-9s10,4.037,10,9c0,0.321-0.021,0.638-0.056,0.952 c-0.597,5.522-6.272,9.426-7.404,10.152L13,23.093z</Geometry>
+            <Geometry x:Key="CheckBoxGeometry">M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M10,17.414 l-4.707-4.707l1.414-1.414L10,14.586l7.293-7.293l1.414,1.414L10,17.414z</Geometry>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>
