@@ -1153,6 +1153,31 @@
             </DrawingGroup>
         </DrawingImage.Drawing>
     </DrawingImage>
+    <DrawingImage x:Key="UploadToCloud">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <GeometryDrawing Brush="#FFBBDEFB" Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero" Figures="M38,17C38,17 38,17 38,17 38,16.8 38,16.7 38,16.5 38,12.9 35.1,10 31.5,10 29.8,10 28.3,10.7 27.1,11.7 25.7,8.9 22.8,7 19.5,7 14.8,7 11,10.8 11,15.5 11,16 11.1,16.5 11.1,17 7.7,17.4 5,20.3 5,23.9 5,27.8 8.1,30.9 12,30.9 12,30.9 12.1,30.9 12.1,30.9 12.4,31 12.7,31 13,31L38,31C41.9,31 45,27.9 45,24 45,20.1 41.9,17 38,17z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF3F51B5" Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero" Figures="M33.1,27L25.1,18 17.1,27 22,27 22,41 28,41 28,27z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingGroup.Children>
+                        <DrawingGroup.ClipGeometry>
+                            <RectangleGeometry Rect="0,0,48,48" />
+                        </DrawingGroup.ClipGeometry>
+                    </DrawingGroup>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
     <Geometry x:Key="RightButtonGeometry">M18.71875 6.78125L17.28125 8.21875L24.0625 15L4 15L4 17L24.0625 17L17.28125 23.78125L18.71875 25.21875L27.21875 16.71875L27.90625 16L27.21875 15.28125Z</Geometry>
     <Geometry x:Key="MessengerGeometry">M13,23.093v-3.141C7.034,20.524,2,16.26,2,11c0-4.963,4.486-9,10-9s10,4.037,10,9c0,0.321-0.021,0.638-0.056,0.952 c-0.597,5.522-6.272,9.426-7.404,10.152L13,23.093z</Geometry>
     <Geometry x:Key="CheckBoxGeometry">M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M10,17.414 l-4.707-4.707l1.414-1.414L10,14.586l7.293-7.293l1.414,1.414L10,17.414z</Geometry>

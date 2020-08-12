@@ -9,7 +9,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <hc:Shield Margin="30,10,0,0" Color="{DynamicResource DangerBrush}" Subject="Dribbble" Status="Johny vino™" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://dribbble.com/shots/5401746-Change-currency"/>
+        <hc:Shield Margin="30,10,0,0" Color="{DynamicResource DangerBrush}" Subject="Designer" Status="Johny vino™" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://dribbble.com/shots/5401746-Change-currency"/>
         <hc:ScrollViewer Grid.Row="1">
             <Border Effect="{StaticResource EffectShadow4}" Background="{DynamicResource RegionBrush}" Margin="20" CornerRadius="16">
                 <Grid>

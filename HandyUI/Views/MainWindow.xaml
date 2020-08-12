@@ -44,6 +44,7 @@
         <ListBox Style="{StaticResource ListBoxModernStyle}">
             <ListBoxItem Tag="BasicKanban" Margin="10" Content="Basic Kanban"/>
             <ListBoxItem Tag="SelectCountry" Margin="10,0" Content="Select Country"/>
+            <ListBoxItem Tag="UploadToCloud" hc:ListBoxAttach.IsNew="True" Margin="10,0" Content="Upload To Cloud"/>
             <hc:Interaction.Triggers>
                 <hc:EventTrigger EventName="SelectionChanged">
                     <hc:EventToCommand Command="{Binding SwitchItemCommand}" PassEventArgsToCommand="True"/>
