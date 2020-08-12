@@ -25,6 +25,7 @@ namespace HandyUI
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<BasicKanban>();
+            containerRegistry.RegisterForNavigation<SelectCountry>();
         }
         internal void UpdateSkin(SkinType skin)
         {

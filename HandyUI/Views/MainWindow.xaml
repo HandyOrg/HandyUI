@@ -43,7 +43,7 @@
         </Grid.ColumnDefinitions>
         <ListBox Style="{StaticResource ListBoxModernStyle}">
             <ListBoxItem Tag="BasicKanban" Margin="10" Content="Basic Kanban"/>
-            <ListBoxItem Margin="10,0" Content="Example 2"/>
+            <ListBoxItem Tag="SelectCountry" Margin="10,0" Content="Select Country"/>
             <hc:Interaction.Triggers>
                 <hc:EventTrigger EventName="SelectionChanged">
                     <hc:EventToCommand Command="{Binding SwitchItemCommand}" PassEventArgsToCommand="True"/>

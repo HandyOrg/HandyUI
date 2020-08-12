@@ -4,302 +4,306 @@
              xmlns:prism="http://prismlibrary.com/"        
              xmlns:hc="https://handyorg.github.io/handycontrol"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <hc:ScrollViewer HorizontalScrollBarVisibility="Auto">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
+    <Border Effect="{StaticResource EffectShadow4}" Background="{DynamicResource RegionBrush}" Margin="20" CornerRadius="16">
+        <Border Margin="0" Background="{DynamicResource BackgroundBrush}" CornerRadius="16">
+            <hc:ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
 
-            <Grid Grid.Row="0" Margin="0,0,0,10" Background="#666EE9" Grid.ColumnSpan="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <ToggleButton Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ToggleButtonIcon}" hc:IconSwitchElement.GeometrySelected="{DynamicResource RightGeometry}" hc:IconSwitchElement.Geometry="{DynamicResource AlignHStretchGeometry}"/>
-                    <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" VerticalAlignment="Stretch"/>
-                    <TextBlock Margin="10,0" Text="Basic Kanban" FontWeight="DemiBold" FontSize="20" VerticalAlignment="Center" Foreground="{DynamicResource SecondaryRegionBrush}"/>
-                </StackPanel>
-                <hc:SearchBar Style="{StaticResource SearchBarPlus}" Foreground="White" hc:InfoElement.Placeholder="Search for cards..." Grid.Column="1" Background="#5B63D0" BorderThickness="0" Margin="10,5"/>
-                <StackPanel Margin="0,0" HorizontalAlignment="Right" Grid.Column="2" Orientation="Horizontal">
-                    <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
-                    <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ScrollModeGeometry}"/>
-                    <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+                    <Grid Grid.Row="0" Margin="10,10,0,10" Background="#666EE9" Grid.ColumnSpan="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <ToggleButton Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ToggleButtonIcon}" hc:IconSwitchElement.GeometrySelected="{DynamicResource RightGeometry}" hc:IconSwitchElement.Geometry="{DynamicResource AlignHStretchGeometry}"/>
+                            <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" VerticalAlignment="Stretch"/>
+                            <TextBlock Margin="10,0" Text="Basic Kanban" FontWeight="DemiBold" FontSize="20" VerticalAlignment="Center" Foreground="{DynamicResource SecondaryRegionBrush}"/>
+                        </StackPanel>
+                        <hc:SearchBar Style="{StaticResource SearchBarPlus}" Foreground="White" hc:InfoElement.Placeholder="Search for cards..." Grid.Column="1" Background="#5B63D0" BorderThickness="0" Margin="10,5"/>
+                        <StackPanel Margin="0,0" HorizontalAlignment="Right" Grid.Column="2" Orientation="Horizontal">
+                            <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+                            <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ScrollModeGeometry}"/>
+                            <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
 
-                    <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource WarningGeometry}"/>
-                    <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+                            <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource WarningGeometry}"/>
+                            <GridSplitter Width=".5" Background="{DynamicResource SecondaryBorderBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
 
-                    <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ConfigGeometry}"/>
+                            <Button Background="#666EE9" BorderThickness="0" Foreground="{DynamicResource BorderBrush}" Cursor="Hand" Margin="5,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ConfigGeometry}"/>
 
-                </StackPanel>
-            </Grid>
-            <hc:ScrollViewer Grid.Column="0" Grid.Row="1">
-                <StackPanel>
-                    <TextBlock Text="Later" FontWeight="Medium" Margin="20,0"/>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Print Business Card"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
+                        </StackPanel>
+                    </Grid>
+                    <hc:ScrollViewer Grid.Column="0" Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Text="Later" FontWeight="Medium" Margin="20,0"/>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Print Business Card"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
 
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Register for Confrence in SF"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Create pitch deck for investors"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
-                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Medium" Margin="10,0" Text="Contact venture capitalists about investing"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" TextWrapping="WrapWithOverflow" Text="Order t-shirts with our logo to give out at events"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </StackPanel>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Register for Confrence in SF"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Create pitch deck for investors"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource InfoBrush}"/>
+                                        <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Medium" Margin="10,0" Text="Contact venture capitalists about investing"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" TextWrapping="WrapWithOverflow" Text="Order t-shirts with our logo to give out at events"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </hc:ScrollViewer>
+                    <GridSplitter Grid.Column="0" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+
+                    <hc:ScrollViewer Grid.Column="1" Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Text="Up Next" FontWeight="Medium" Margin="20,0"/>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource SuccessBrush}"/>
+                                            <Border HorizontalAlignment="Left" Margin="0,10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
+                                        </StackPanel>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Lease an office"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 2" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DarkWarningBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Update brand guilelines for marketing"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource SuccessBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Create marketing email to send to potential clients"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource MessengerGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource PrimaryBrush}"/>
+                                            <Border HorizontalAlignment="Left" Margin="0,10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DarkWarningBrush}"/>
+
+                                        </StackPanel>
+                                        <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Medium" Margin="10,0" Text="Send out email about new features"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 2" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </hc:ScrollViewer>
+                    <GridSplitter Grid.Column="1" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+
+                    <hc:ScrollViewer Grid.Column="2" Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Text="In Progress" FontWeight="Medium" Margin="20,0"/>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Porchase website"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource SuccessBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="2 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="#666EE9"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Setup email accounts for employees"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </hc:ScrollViewer>
+                    <GridSplitter Grid.Column="2" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
+
+                    <hc:ScrollViewer Grid.Column="3" Grid.Row="1">
+                        <StackPanel>
+                            <TextBlock Text="Complete" FontWeight="Medium" Margin="20,0"/>
+                            <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DangerBrush}"/>
+                                        <TextBlock FontWeight="Medium" Margin="10,0" Text="Form company in Delaware"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                        <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
+                                        <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
+                                        <Button Foreground="{DynamicResource SuccessBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
+                                        <TextBlock Text="4 / 4" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </hc:ScrollViewer>
+                    <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Foreground="{DynamicResource RegionBrush}" Background="{DynamicResource VioletBrush}" Width="40" Height="40" hc:IconElement.Geometry="{DynamicResource AddGeometry}" Style="{StaticResource ButtonIconCircular}" Grid.Row="1" Grid.Column="3"/>
+                </Grid>
             </hc:ScrollViewer>
-            <GridSplitter Grid.Column="0" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
-
-            <hc:ScrollViewer Grid.Column="1" Grid.Row="1">
-                <StackPanel>
-                    <TextBlock Text="Up Next" FontWeight="Medium" Margin="20,0"/>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource SuccessBrush}"/>
-                                    <Border HorizontalAlignment="Left" Margin="0,10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
-                                </StackPanel>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Lease an office"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 2" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DarkWarningBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Update brand guilelines for marketing"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource SuccessBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Create marketing email to send to potential clients"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource MessengerGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource PrimaryBrush}"/>
-                                    <Border HorizontalAlignment="Left" Margin="0,10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DarkWarningBrush}"/>
-
-                                </StackPanel>
-                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Medium" Margin="10,0" Text="Send out email about new features"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 2" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </StackPanel>
-            </hc:ScrollViewer>
-            <GridSplitter Grid.Column="1" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
-
-            <hc:ScrollViewer Grid.Column="2" Grid.Row="1">
-                <StackPanel>
-                    <TextBlock Text="In Progress" FontWeight="Medium" Margin="20,0"/>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource WarningBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Porchase website"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource SuccessBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="2 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="#666EE9"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Setup email accounts for employees"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource InfoBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="0 / 3" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </StackPanel>
-            </hc:ScrollViewer>
-            <GridSplitter Grid.Column="2" Grid.Row="1" Width=".5" Background="{DynamicResource ThirdlyTextBrush}" IsEnabled="False" VerticalAlignment="Stretch"/>
-
-            <hc:ScrollViewer Grid.Column="3" Grid.Row="1">
-                <StackPanel>
-                    <TextBlock Text="Complete" FontWeight="Medium" Margin="20,0"/>
-                    <Border Background="{DynamicResource RegionBrush}" CornerRadius="4" Margin="25,10" Effect="{StaticResource EffectShadow3}" Width="240" Height="90" >
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <StackPanel>
-                                <Border HorizontalAlignment="Left" Margin="10" Height="5" CornerRadius="2" Width="30" Background="{DynamicResource DangerBrush}"/>
-                                <TextBlock FontWeight="Medium" Margin="10,0" Text="Form company in Delaware"/>
-                            </StackPanel>
-                            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                                <Button Foreground="{DynamicResource PrimaryBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource InfoGeometry}"/>
-                                <Button Foreground="{DynamicResource ThirdlyTextBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AlignLeftGeometry}"/>
-                                <Button Foreground="{DynamicResource SuccessBrush}" BorderThickness="0" Margin="0,5" Style="{DynamicResource ButtonIcon}" hc:IconElement.Height="16" hc:IconElement.Width="16" hc:IconElement.Geometry="{DynamicResource CheckBoxGeometry}"/>
-                                <TextBlock Text="4 / 4" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource ThirdlyTextBrush}"/>
-
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </StackPanel>
-            </hc:ScrollViewer>
-
-        </Grid>
-    </hc:ScrollViewer>
+        </Border>
+    </Border>
 </UserControl>
