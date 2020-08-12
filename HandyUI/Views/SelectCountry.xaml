@@ -4,52 +4,87 @@
              xmlns:prism="http://prismlibrary.com/" 
              xmlns:hc="https://handyorg.github.io/handycontrol"
              prism:ViewModelLocator.AutoWireViewModel="True">
-    <Border Effect="{StaticResource EffectShadow4}" Background="{DynamicResource RegionBrush}" Margin="20" CornerRadius="16">
-        <hc:ScrollViewer HorizontalScrollBarVisibility="Auto">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <hc:SearchBar Margin="10" Style="{StaticResource SearchBarPlus}" hc:InfoElement.Placeholder="Enter a name of Country or currency"/>
-                <WrapPanel Width="400" HorizontalAlignment="Center" Margin="10" Grid.Row="1">
-                    <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderBrush="{DynamicResource PrimaryBrush}" BorderThickness="2" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="USD"/>
-                    <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="GBP" BorderThickness="0"/>
-                    <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="JPY" BorderThickness="0"/>
-                    <Button Width="90" Margin="0,50" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="NZD" BorderThickness="0"/>
-                    <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="INR" BorderThickness="0"/>
-                    <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="EUR" BorderThickness="0"/>
-                    <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="PYG" BorderThickness="0"/>
-                    <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" BorderThickness="0" Content="EUR"/>
-                    <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" hc:IconElement.Geometry="{DynamicResource CalendarGeometry}" Content="ZAR" BorderThickness="0"/>
-                </WrapPanel>
-                <hc:Divider Grid.Row="2"/>
-                <StackPanel Margin="10,0,10,10" Grid.Row="2" Orientation="Horizontal">
-                    <Border x:Name="bd1" Margin="5,0" HorizontalAlignment="Left" Height="4" Width="30" Background="{DynamicResource PrimaryBrush}" />
-                    <Border x:Name="bd2" HorizontalAlignment="Left" Height="4" Width="30" Background="{DynamicResource ThirdlyTextBrush}" />
-                    <Border x:Name="bd3" HorizontalAlignment="Left" Margin="5,0" Width="30" Height="4" Background="{DynamicResource ThirdlyTextBrush}" />
-                    <TextBlock Margin="100" VerticalAlignment="Center" FontWeight="DemiBold" HorizontalAlignment="Center" Text="United States Dollars"/>
-                    <Button Effect="{StaticResource EffectShadow3}" hc:IconElement.Height="16" hc:IconElement.Width="16" HorizontalAlignment="Right" Margin="5,0" Foreground="{DynamicResource RegionBrush}" Background="{DynamicResource DarkPrimaryBrush}" Width="40" Height="40" hc:IconElement.Geometry="{DynamicResource RightGeometry}">
-                        <Button.Style>
-                            <Style TargetType="Button" BasedOn="{StaticResource ButtonIconCircular}">
-                                <Style.Triggers>
-                                    <MultiDataTrigger>
-                                        <MultiDataTrigger.Conditions>
-                                            <Condition Binding="{Binding ElementName=bd1, Path=Background}" Value="{StaticResource ThirdlyTextBrush}"/>
-                                            <Condition Binding="{Binding ElementName=bd2, Path=Background}" Value="{StaticResource ThirdlyTextBrush}"/>
-                                        </MultiDataTrigger.Conditions>
-                                        <MultiDataTrigger.Setters>
-                                            <Setter TargetName="bd3" Property="Background" Value="{DynamicResource PrimaryBrush}"/>
-                                        </MultiDataTrigger.Setters>
-                                    </MultiDataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                </StackPanel>
-            </Grid>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <hc:Shield Margin="30,10,0,0" Color="{DynamicResource DangerBrush}" Subject="Dribbble" Status="Johny vino™" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://dribbble.com/shots/5401746-Change-currency"/>
+        <hc:ScrollViewer Grid.Row="1">
+            <Border Effect="{StaticResource EffectShadow4}" Background="{DynamicResource RegionBrush}" Margin="20" CornerRadius="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="110"/>
+                    </Grid.RowDefinitions>
+                    <hc:SearchBar Margin="10" Style="{StaticResource SearchBarPlus}" hc:InfoElement.Placeholder="Enter a name of Country or currency"/>
+                    <WrapPanel Width="400" HorizontalAlignment="Center" Margin="10" Grid.Row="1">
+                        <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderBrush="{DynamicResource PrimaryBrush}" BorderThickness="2">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource usd}"/>
+                                <TextBlock Margin="10,0" Text="USD"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource gbp}"/>
+                                <TextBlock Margin="10,0" Text="GBP"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource irr}"/>
+                                <TextBlock Margin="10,0" Text="IRR"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Margin="0,50" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource nzd}"/>
+                                <TextBlock Margin="10,0" Text="NZD"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource inr}"/>
+                                <TextBlock Margin="10,0" Text="INR"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource eur}"/>
+                                <TextBlock Margin="10,0" Text="EUR"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource pyg}"/>
+                                <TextBlock Margin="10,0" Text="PYG"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Margin="50,0" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource eur2}"/>
+                                <TextBlock Margin="10,0" Text="EUR"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Width="90" Foreground="{DynamicResource PrimaryBrush}" hc:BorderElement.CornerRadius="16" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{StaticResource zar}"/>
+                                <TextBlock Margin="10,0" Text="ZAR"/>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <hc:Divider Grid.Row="2"/>
+                    <StackPanel HorizontalAlignment="Center" Margin="10,0,10,0" Grid.Row="2" Orientation="Horizontal">
+                        <Border Margin="5,0" HorizontalAlignment="Left" Height="4" Width="30" Background="{DynamicResource PrimaryBrush}" />
+                        <Border HorizontalAlignment="Left" Height="4" Width="30" Background="{DynamicResource ThirdlyTextBrush}" />
+                        <Border HorizontalAlignment="Left" Margin="5,0" Width="30" Height="4" Background="{DynamicResource ThirdlyTextBrush}" />
+                        <TextBlock Margin="100" VerticalAlignment="Center" FontWeight="DemiBold" HorizontalAlignment="Center" Text="United States Dollars"/>
+                        <Button Effect="{StaticResource EffectShadow3}" hc:IconElement.Height="16" hc:IconElement.Width="16" HorizontalAlignment="Right" Margin="5,0" Foreground="{DynamicResource RegionBrush}" Background="{DynamicResource DarkPrimaryBrush}" Width="40" Height="40" Style="{StaticResource ButtonIconCircular}" hc:IconElement.Geometry="{DynamicResource RightButtonGeometry}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
         </hc:ScrollViewer>
-    </Border>
-
+    </Grid>
 </UserControl>
