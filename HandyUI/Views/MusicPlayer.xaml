@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="HandyUI.Views.MusicPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"  
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <hc:Shield Margin="30,5,0,0" Color="{DynamicResource DangerBrush}" Subject="Designer" Status="jmacato" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://github.com/jmacato/Synfonia"/>
+            <TextBox Grid.Column="1" Style="{StaticResource TextBoxExtend}" MinWidth="450" hc:InfoElement.Placeholder="Search" Margin="10" HorizontalAlignment="Center" Grid.Row="0"/>
+
+        </Grid>
+        <ListBox Background="Transparent" Grid.Row="1" Margin="32,0" BorderThickness="0" Style="{DynamicResource WrapPanelHorizontalListBox}" ItemsSource="{Binding DataList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="data:CardModel">
+                    <hc:Card Background="Transparent" MaxWidth="240" BorderThickness="0" Effect="{DynamicResource EffectShadow3}" Margin="8" Footer="{Binding Footer}">
+                        <!--Card Content section template-->
+                        <Border CornerRadius="4,4,0,0" Width="160" Height="160">
+                            <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="{Binding Content}"/>
+                        </Border>
+                        <!--Card Footer section template-->
+                        <hc:Card.FooterTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="10" Width="160">
+                                    <!--Card First-level content-->
+                                    <TextBlock TextWrapping="NoWrap" FontSize="12" Style="{DynamicResource TextBlockTitleBold}" TextTrimming="CharacterEllipsis" 
+                                           Text="{Binding DataContext.Header,RelativeSource={RelativeSource AncestorType=hc:Card}}" 
+                                           HorizontalAlignment="Left"/>
+                                    <!--Card Secondary content-->
+                                    <TextBlock TextWrapping="NoWrap" FontSize="12" Style="{DynamicResource TextBlockSubTitle}" TextTrimming="CharacterEllipsis" 
+                                           Text="{Binding}" Margin="0,6,0,0"
+                                           HorizontalAlignment="Left"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </hc:Card.FooterTemplate>
+                    </hc:Card>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Border Grid.Row="1" Background="{DynamicResource BorderBrush}" VerticalAlignment="Bottom" CornerRadius="12,12,0,0" Margin="20 0" Height="80" Effect="{StaticResource EffectShadow5}">
+            <DockPanel>
+                
+                <StackPanel DockPanel.Dock="Left" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <Image Source="/HandyUI;component/Resources/Album/9.jpg" Stretch="Uniform" Margin="8"/>
+                    <StackPanel Margin="20,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockSubTitleBold}" TextTrimming="CharacterEllipsis" 
+                                           Text="Won't Back Down" 
+                                           HorizontalAlignment="Left"/>
+                        <TextBlock TextWrapping="NoWrap" FontSize="11" Style="{DynamicResource TextBlockSubTitle}" TextTrimming="CharacterEllipsis" 
+                                           Text="Boehm" Margin="0,6,0,0"
+                                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="10" HorizontalAlignment="Left">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button hc:IconElement.Height="12" hc:IconElement.Width="12" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ShuffleGeometry}"/>
+                        <Button hc:IconElement.Height="12" hc:IconElement.Width="12" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource DoubleLeftGeometry}"/>
+                        <ToggleButton hc:IconElement.Height="12" hc:IconElement.Width="12" BorderThickness="0" Background="Transparent" Foreground="{DynamicResource SecondaryTextBrush}" Style="{DynamicResource ToggleButtonIcon}" hc:IconSwitchElement.GeometrySelected="{DynamicResource PlayGeometry}" hc:IconSwitchElement.Geometry="{DynamicResource PauseGeometry}"/>
+                        <Button hc:IconElement.Height="12" hc:IconElement.Width="12" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource DoubleRightGeometry}"/>
+                        <Button hc:IconElement.Height="12" hc:IconElement.Width="12" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ResetGeometry}"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock TextWrapping="NoWrap" FontSize="11" Style="{DynamicResource TextBlockSubTitleBold}" TextTrimming="CharacterEllipsis" 
+                                           Text="00:27.6"
+                                           HorizontalAlignment="Center"/>
+                        <Slider Margin="5,0" Width="450" Maximum="100" Value="24"/>
+                        <TextBlock TextWrapping="NoWrap" FontSize="11" Style="{DynamicResource TextBlockSubTitleBold}" TextTrimming="CharacterEllipsis" 
+                                           Text="03:14.8"
+                                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button hc:IconElement.Height="12" hc:IconElement.Width="12" Foreground="{DynamicResource SecondaryTextBrush}" BorderThickness="0" Style="{DynamicResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource SpeakerGeometry}"/>
+
+                    <Slider Margin="0,5,5,5" Width="100" Maximum="100" Value="100"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -15,3 +15,5 @@ The designs are created statically and are not dynamic. We may create it dynamic
 ![SelectCountry](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyUI/SelectCountry.png)
 
 ![UploadToCloud](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyUI/UploadToCloud.png)
+
+![MusicPlayer](https://raw.githubusercontent.com/HandyOrg/HandyOrgResource/master/HandyUI/MusicPlayer.png)

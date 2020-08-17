@@ -7,6 +7,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
+        WindowState="Maximized"
+        ResizeMode="CanResizeWithGrip"
         Title="{Binding Title}" 
         WindowStartupLocation="CenterScreen"
         ShowTitle="True"
@@ -42,9 +44,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <ListBox Style="{StaticResource ListBoxModernStyle}">
-            <ListBoxItem Tag="BasicKanban" Margin="10" Content="Basic Kanban"/>
+            <ListBoxItem Tag="BasicKanban" Margin="10,10,10,0" Content="Basic Kanban"/>
             <ListBoxItem Tag="SelectCountry" Margin="10,0" Content="Select Country"/>
-            <ListBoxItem Tag="UploadToCloud" hc:ListBoxAttach.IsNew="True" Margin="10,0" Content="Upload To Cloud"/>
+            <ListBoxItem Tag="UploadToCloud" Margin="10,0" Content="Upload To Cloud"/>
+            <ListBoxItem Tag="MusicPlayer" hc:ListBoxAttach.IsNew="True" Margin="10,0" Content="Music Player"/>
             <hc:Interaction.Triggers>
                 <hc:EventTrigger EventName="SelectionChanged">
                     <hc:EventToCommand Command="{Binding SwitchItemCommand}" PassEventArgsToCommand="True"/>
