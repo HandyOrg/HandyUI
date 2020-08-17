@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="HandyUI.Views.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"    
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <TabControl Background="{DynamicResource BackgroundBrush}" Style="{StaticResource TabControlInLine}">
+            <TabItem Header="Example 1">
+                <Grid Margin="50" Background="{DynamicResource RegionBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="50,0,50,50" Source="{StaticResource Ninja}" VerticalAlignment="Bottom"/>
+
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <TextBlock FontWeight="Bold" Text="Create your Cleanmock Account"/>
+                        <TextBox hc:TitleElement.Title="YOUR NAME" Margin="0,10" Style="{StaticResource TextBoxExtend}" Text="JonnyVino"/>
+                        <TextBox hc:TitleElement.Title="EMAIL" Margin="0,10" Style="{StaticResource TextBoxExtend}" Text="mahdidvb72@gmail.com"/>
+                        <hc:PasswordBox ShowEyeButton="True" BorderBrush="Orange" BorderThickness="1" hc:TitleElement.Title="PASSWORD" Password="123456789" />
+                        <StackPanel Orientation="Horizontal" Margin="10,15">
+                            <Border Height="3" Width="100" BorderBrush="{DynamicResource WarningBrush}" BorderThickness="2"/>
+                            <Border Height="3" Width="70" BorderBrush="{DynamicResource BackgroundBrush}" BorderThickness="2"/>
+                            <TextBlock Margin="50,0,0,0" Text="Weak" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10,15" HorizontalAlignment="Center">
+                            <Button Content="Login" BorderThickness="0" Foreground="{DynamicResource PrimaryBrush}" FontWeight="Bold" Width="100"/>
+                            <Button Margin="10,0" Content="Create" Style="{DynamicResource ButtonPrimary}" Width="150"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Example 2">
+                <Grid Margin="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <hc:Shield Margin="10,10" Color="{DynamicResource DangerBrush}" Subject="Designer" Status="Liviu Anghelina" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://dribbble.com/shots/13978607"/>
+                    <Border Effect="{StaticResource EffectShadow4}" Grid.Row="1" CornerRadius="16,0,0,16">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#4820c2"/>
+                                <GradientStop Color="#451bfe"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel>
+
+                            <TextBlock Margin="40,80,0,0" Foreground="White">
+                            <Bold>super</Bold>path
+                            </TextBlock>
+
+                            <TextBlock FontWeight="DemiBold" FontSize="22" Foreground="White" Margin="40">
+                            Create brilliant<LineBreak/>
+                            learning pathways
+                            </TextBlock>
+                            <TextBlock FontWeight="Medium" Margin="40,0" Foreground="{DynamicResource ThirdlyTextBrush}">
+                                SuperPath is used by large and small<LineBreak/>
+                                teams to create and share amazing<LineBreak/>
+                                learning pathways.
+                            </TextBlock>
+                            <Image Margin="40,280" Width="46" HorizontalAlignment="Left" Source="{StaticResource Sagittarius}"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Effect="{StaticResource EffectShadow4}" Grid.Row="1" Background="{DynamicResource RegionBrush}" Grid.Column="1" CornerRadius="0,16,16,0">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Image Margin="30" Source="{StaticResource Table}" Width="128"/>
+                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                <Image Width="24" Source="{StaticResource Graduation}"/>
+                                <TextBlock Margin="5,0" Text="Create an account" FontWeight="Bold" FontSize="14"/>
+                            </StackPanel>
+                            <Button Width="350" Margin="0,40">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Margin="10,0" Source="{StaticResource Google}"/>
+
+                                    <TextBlock Text="Sign up with Google"/>
+                                </StackPanel>
+                            </Button>
+                            <hc:Divider Width="350" Content="OR"/>
+                            <TextBox Style="{StaticResource TextBoxExtend}" hc:TitleElement.Title="Your email" Text="mahdidvb72@gmail.com"/>
+                            <PasswordBox Style="{StaticResource PasswordBoxExtend}" hc:TitleElement.Title="Set password"/>
+                            <Button Content="Sign up" Style="{DynamicResource ButtonViolet}" Margin="0,30" Width="350"/>
+                            <TextBlock Margin="0,50,0,0" HorizontalAlignment="Center">
+                                Already have an account? <Button Margin="-4,-10" Content="Sign in" BorderThickness="0" Foreground="Purple" FontWeight="DemiBold" />
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

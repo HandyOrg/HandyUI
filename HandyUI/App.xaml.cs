@@ -28,6 +28,7 @@ namespace HandyUI
             containerRegistry.RegisterForNavigation<SelectCountry>();
             containerRegistry.RegisterForNavigation<UploadToCloud>();
             containerRegistry.RegisterForNavigation<MusicPlayer>();
+            containerRegistry.RegisterForNavigation<Login>();
         }
         internal void UpdateSkin(SkinType skin)
         {
