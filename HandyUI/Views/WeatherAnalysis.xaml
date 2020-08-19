@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="HandyUI.Views.WeatherAnalysis"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/" 
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Background="{DynamicResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <hc:Shield Margin="10" Color="{DynamicResource DangerBrush}" Subject="Designer" Status="Adam Sokołowski" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://dribbble.com/shots/6066535-Weather-Analysis-Process-Dashboard"/>
+        <Border Background="{DynamicResource RegionBrush}" Grid.Row="1" Effect="{StaticResource EffectShadow4}" CornerRadius="16" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="10,5,10,5">
+
+                    <Image Source="{StaticResource Cortana}" Width="28" Height="28" Margin="0,20,0,0"/>
+                    <Button Foreground="{DynamicResource ThirdlyTextBrush}" Width="42" Height="42" Margin="0,20,0,5" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource UserGeometry}" hc:BorderElement.CornerRadius="6"/>
+                    <Button Foreground="{DynamicResource ThirdlyTextBrush}" Width="42" Height="42" Margin="0,0,0,5" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource EditGeometry}" hc:BorderElement.CornerRadius="6"/>
+                    <Button Foreground="{DynamicResource RegionBrush}" Width="42" Height="42" Margin="0,0,0,5" Background="{DynamicResource VioletBrush}" Style="{StaticResource ButtonIcon}" hc:BorderElement.CornerRadius="6" hc:IconElement.Geometry="{DynamicResource StackGeometry}"/>
+                    <Button Foreground="{DynamicResource ThirdlyTextBrush}" Width="42" Height="42" Margin="0,0,0,5" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource TuneGeometry}" hc:BorderElement.CornerRadius="6"/>
+                    <Button Foreground="{DynamicResource ThirdlyTextBrush}" Width="42" Height="42" Margin="0,0,0,5" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource MessageGeometry}" hc:BorderElement.CornerRadius="6"/>
+                    <Button Foreground="{DynamicResource ThirdlyTextBrush}" Width="42" Height="42" Margin="0,300,0,0" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource SwipeGeometry}" hc:BorderElement.CornerRadius="6"/>
+                </StackPanel>
+                <GridSplitter Width="2" BorderBrush="{DynamicResource BackgroundBrush}" BorderThickness="2" VerticalAlignment="Stretch"/>
+                <hc:ScrollViewer Grid.Column="1" Margin="10,0,10,0">
+                    <StackPanel>
+                        <hc:ButtonGroup Margin="0,10,0,10" HorizontalAlignment="Center">
+                            <RadioButton Width="100" Content="Overal"/>
+                            <RadioButton IsEnabled="False" Content="Detail"/>
+                        </hc:ButtonGroup>
+
+                        <Border Width="250" Height="110" Margin="10" Background="#4E4DB0" Effect="{StaticResource EffectShadow4}" CornerRadius="16">
+                            <StackPanel HorizontalAlignment="Center" Margin="0,10,0,0">
+                                <TextBlock HorizontalAlignment="Center" Text="Local thermostat" FontWeight="DemiBold" Foreground="White"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource TextBlockSubTitle}" FontSize="60" Foreground="White">
+                                    27<Run FontSize="40">°C</Run>
+                                    </TextBlock>
+                                    <Button Background="#8382C7" hc:BorderElement.CornerRadius="6" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource WaveGeometry}" Height="34" Width="34" Margin="10,0"/>
+                                    <Button Background="{DynamicResource RegionBrush}" hc:BorderElement.CornerRadius="6" Foreground="#4E4DB0" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ShutdownGeometry}" Height="34" Width="34"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <StackPanel>
+                            <StackPanel Margin="0,12,0,0" HorizontalAlignment="Center"  Orientation="Horizontal">
+                                <Button Background="{DynamicResource RegionBrush}" hc:BorderElement.CornerRadius="7" Foreground="{DynamicResource ThirdlyTextBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource WaterGeometry}"/>
+                                <TextBlock Margin="0,6,0,0" Text="Humidity" FontWeight="DemiBold" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+
+                            <Grid Margin="0,10,0,0">
+                                <hc:Arc StrokeThickness="30" StrokeDashArray="0,0.30,0.1,0.20" Stroke="{DynamicResource BackgroundBrush}" Width="250" Height="250" Stretch="None" StartAngle="-140" EndAngle="140"/>
+                                <hc:Arc StrokeThickness="30" StrokeDashArray="0,0.30,0.1,0.20" Stroke="#4E4DB0" Width="250" Height="250" Stretch="None" StartAngle="-37" EndAngle="80"/>
+                                <StackPanel VerticalAlignment="Center">
+                                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                        <TextBlock Margin="20,0,0,0" Style="{StaticResource TextBlockSubTitle}" FontSize="60" Foreground="{DynamicResource PrimaryTextBrush}" Text="52"/>
+                                        <Button Margin="0,-15,0,0" Background="{DynamicResource RegionBrush}" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource PrimaryTextBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ArrowUpGeometry}"/>
+                                    </StackPanel>
+                                    <TextBlock HorizontalAlignment="Center" Text="Comfort Range" FontWeight="DemiBold" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                </StackPanel>
+                            </Grid>
+                            <StackPanel Margin="0,-10,0,5" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Background="{DynamicResource RegionBrush}" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource InfoBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ConfigGeometry}"/>
+                                <TextBlock Margin="0,6,0,0" Text="Active Parameters" FontWeight="DemiBold" Foreground="{DynamicResource PrimaryTextBrush}"/>
+                            </StackPanel>
+                            <UniformGrid Columns="3" Rows="3" Width="210" Height="210">
+                                <Button Background="#E8F5FE" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource InfoBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource RefrGeometry}" Width="64" Height="64"/>
+                                <Button Background="{DynamicResource InfoBrush}" hc:BorderElement.CornerRadius="8" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ConfigGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="#E8F5FE" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource InfoBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource ScrewGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="#8382C7" hc:BorderElement.CornerRadius="8" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource MoonGeometry}" Height="64" Width="64" hc:IconElement.Height="36" hc:IconElement.Width="36"/>
+                                <Button Background="{DynamicResource InfoBrush}" hc:BorderElement.CornerRadius="8" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource TimerGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="#8382C7" hc:BorderElement.CornerRadius="8" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource WaveGeometry}" Height="64" Width="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="#E8F5FE" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource InfoBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AirCondGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="#E8F5FE" hc:BorderElement.CornerRadius="8" Foreground="{DynamicResource InfoBrush}" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource AtomGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+                                <Button Background="{DynamicResource InfoBrush}" hc:BorderElement.CornerRadius="8" Foreground="WhiteSmoke" Style="{StaticResource ButtonIcon}" hc:IconElement.Geometry="{DynamicResource CoolGeometry}" Width="64" Height="64" hc:IconElement.Height="32" hc:IconElement.Width="32"/>
+
+                            </UniformGrid>
+                        </StackPanel>
+                    </StackPanel>
+                </hc:ScrollViewer>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</UserControl>

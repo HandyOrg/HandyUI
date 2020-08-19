@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HandyUI.Models
+﻿namespace HandyUI.Models
 {
     public class CardModel
     {

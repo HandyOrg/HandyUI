@@ -1,8 +1,6 @@
-﻿using HandyControl.Controls;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
-using System;
 using System.Windows.Controls;
 
 namespace HandyUI.ViewModels

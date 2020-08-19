@@ -1,11 +1,11 @@
 ﻿using HandyControl.Data;
 using HandyControl.Themes;
 using HandyControl.Tools;
-using System.Windows;
-using System;
-using Prism.Ioc;
 using HandyUI.Views;
+using Prism.Ioc;
 using Prism.Regions;
+using System;
+using System.Windows;
 
 namespace HandyUI
 {
@@ -29,6 +29,7 @@ namespace HandyUI
             containerRegistry.RegisterForNavigation<UploadToCloud>();
             containerRegistry.RegisterForNavigation<MusicPlayer>();
             containerRegistry.RegisterForNavigation<Login>();
+            containerRegistry.RegisterForNavigation<WeatherAnalysis>();
         }
         internal void UpdateSkin(SkinType skin)
         {
