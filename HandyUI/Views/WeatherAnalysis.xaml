@@ -85,6 +85,142 @@
                         </StackPanel>
                     </StackPanel>
                 </hc:ScrollViewer>
+                <GridSplitter Grid.Column="1" Width="2" BorderBrush="{DynamicResource BackgroundBrush}" BorderThickness="2" VerticalAlignment="Stretch"/>
+                <hc:ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="2">
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Margin="0,0,20,0">
+                            <Grid.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FAFAFD" Offset="0"/>
+                                    <GradientStop Color="#FDFDFE" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+
+                            <Border Margin="30,20,0,30" HorizontalAlignment="Left" Background="{DynamicResource RegionBrush}" Width="450" Height="400" Effect="{StaticResource EffectShadow1}" CornerRadius="16">
+                                <StackPanel>
+                                    <TextBlock Text="Comfort Range" FontWeight="DemiBold" FontSize="14" Margin="40,40,0,0"/>
+                                    <TextBlock Text="Last update: 18:24, 22/02/19" Foreground="{DynamicResource ThirdlyTextBrush}" Margin="40,5,0,0"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.ColumnSpan="8">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="30"/>
+                                                <RowDefinition Height="55"/>
+                                                <RowDefinition Height="55"/>
+                                                <RowDefinition Height="55"/>
+                                                <RowDefinition Height="55"/>
+                                                <RowDefinition Height="55"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="auto"/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock FontWeight="DemiBold" Grid.Column="0" Margin="20,20,0,0" Grid.Row="1" Text="2.0" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                            <Border Margin="30,0,-30,0" Grid.Column="1" Grid.Row="1" BorderThickness="2" BorderBrush="{DynamicResource BackgroundBrush}" CornerRadius="30,0,30,0" Height="2" Effect="{StaticResource EffectShadow5}"/>
+
+                                            <TextBlock FontWeight="DemiBold" Grid.Column="0" Margin="20,20,0,0" Grid.Row="2" Text="1.5" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                            <Border Margin="30,0,-30,0" Grid.Column="1" Grid.Row="2" BorderThickness="2" BorderBrush="{DynamicResource BackgroundBrush}" CornerRadius="30,0,30,0" Height="2" Effect="{StaticResource EffectShadow5}"/>
+
+                                            <TextBlock FontWeight="DemiBold" Grid.Column="0" Margin="20,20,0,0" Grid.Row="3" Text="1.0" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                            <Border Margin="30,0,-30,0" Grid.Column="1" Grid.Row="3" BorderThickness="2" BorderBrush="{DynamicResource BackgroundBrush}" CornerRadius="30,0,30,0" Height="2" Effect="{StaticResource EffectShadow5}"/>
+
+                                            <TextBlock FontWeight="DemiBold" Grid.Column="0" Margin="20,20,0,0" Grid.Row="4" Text="0.5" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                            <Border Margin="30,0,-30,0" Grid.Column="1" Grid.Row="4" BorderThickness="2" BorderBrush="{DynamicResource BackgroundBrush}" CornerRadius="30,0,30,0" Height="2" Effect="{StaticResource EffectShadow5}"/>
+
+                                            <TextBlock FontWeight="DemiBold" Grid.Column="0" Margin="20,20,0,0" Grid.Row="5" Text="0.0" Foreground="{DynamicResource ThirdlyTextBrush}"/>
+                                            <Border Margin="30,0,-30,0" Grid.Column="1" Grid.Row="5" BorderThickness="2" BorderBrush="{DynamicResource BackgroundBrush}" CornerRadius="30,0,30,0" Height="2" Effect="{StaticResource EffectShadow5}"/>
+                                        </Grid>
+
+                                        <Rectangle Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="135" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="115" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="2" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="165" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="2" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="145" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="3" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="80" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="3" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="60" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="4" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="220" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="4" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="165" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="5" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="220" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="5" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="195" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="6" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="170" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="6" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="145" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="7" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="110" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="7" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="95" Fill="#4E4DB0"/>
+
+                                        <Rectangle Grid.Column="8" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="150" Fill="{DynamicResource InfoBrush}"/>
+                                        <Rectangle Grid.Column="8" VerticalAlignment="Bottom" Margin="0,0,0,25" Width="4" Height="110" Fill="#4E4DB0"/>
+
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+
+                            <Ellipse Opacity=".2" Width="140" Height="140" StrokeThickness="2" Fill="#EAEAF5" HorizontalAlignment="Right" Margin="0,0,60,0"/>
+                            <Ellipse Effect="{StaticResource EffectShadow2}" Width="140" Height="140" StrokeThickness="2" Stroke="#4E4DB0" HorizontalAlignment="Right" Margin="0,0,60,0"/>
+                            <Ellipse StrokeDashArray="4,4,0,0" Width="200" Height="200" StrokeThickness="2" Stroke="#EAEAF5" HorizontalAlignment="Right" Margin="0,0,30,0"/>
+                            <Ellipse StrokeDashArray="4,4,0,0" Width="270" Height="270" StrokeThickness="2" Stroke="#EAEAF5" HorizontalAlignment="Right" Margin="0,0,-5,0"/>
+
+                            <Border CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Right">
+                                <Ellipse Width="10" Height="10" Fill="{DynamicResource DangerBrush}"/>
+                            </Border>
+
+                            <Border Margin="250,0,0,200" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Center">
+                                <Ellipse Width="10" Height="10" Fill="#4E4DB0"/>
+                            </Border>
+
+                            <Border Margin="350,150,0,0" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Center">
+                                <Ellipse Width="10" Height="10" Fill="#4E4DB0"/>
+                            </Border>
+
+                            <Border Margin="350,250,0,0" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Right">
+                                <Ellipse Width="10" Height="10" Fill="#4E4DB0"/>
+                            </Border>
+
+                            <Border Margin="0,0,140,50" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Right">
+                                <Ellipse Width="10" Height="10" Fill="#4E4DB0"/>
+                            </Border>
+
+                            <Border Margin="0,80,100,0" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Right">
+                                <Ellipse Width="10" Height="10" Fill="{DynamicResource DangerBrush}" hc:Poptip.HitMode="Hover" hc:Poptip.IsOpen="True" hc:Poptip.Placement="Top">
+                                    <hc:Poptip.Content>
+                                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                            <Image Width="32" Height="32" Source="{StaticResource Error}"/>
+                                            <TextBlock Text="-7.24%" Margin="5,0" FontWeight="DemiBold" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </hc:Poptip.Content>
+                                </Ellipse>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#F0F3F8"/>
+                                    <GradientStop Color="#fefefe" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                        </Grid>
+                        
+                    </Grid>
+                </hc:ScrollViewer>
             </Grid>
         </Border>
         
