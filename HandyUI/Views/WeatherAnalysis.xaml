@@ -237,6 +237,8 @@
                                     <TextBlock Text="1m" FontWeight="DemiBold" FontSize="14" Foreground="{DynamicResource PrimaryTextBrush}" HorizontalAlignment="Center"/>
                                 </Border>
                                 <TextBlock Text="3m" FontWeight="DemiBold" FontSize="14" Foreground="{DynamicResource ThirdlyTextBrush}" Margin="20,0,0,0"/>
+
+                                <Button Margin="20,0,0,20" FontWeight="DemiBold" Content="Download data" Style="{StaticResource ButtonInfo}" hc:IconElement.Geometry="{DynamicResource DownloadGeometry}" hc:IconElement.Height="14" hc:IconElement.Width="14"/>
                             </StackPanel>
 
                             <Grid Grid.Row="1">
@@ -300,7 +302,7 @@
 	c5.01-8.64,5.38-10.64,7.23-10.98c2.45-0.44,4.88,2.48,6.64,4.6c3.8,4.57,5.11,9.28,6.04,12.77c3.21,12.01,5.55,22.39,6.13,24.94
 	c1.42,6.25,1.79,7.43,2.44,10.1c0,0,0.47,1.93,0.97,4.2c0.66,2.96,2.5,12.49,4.77,25.45"/>
 
-                                <Border hc:Poptip.HitMode="Hover" hc:Poptip.IsOpen="True" hc:Poptip.Placement="Top" hc:Poptip.Content="+21.67%" Margin="0,40,310,0" Grid.RowSpan="6" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Center">
+                                <Border hc:Poptip.HitMode="Hover" hc:Poptip.IsOpen="True" hc:Poptip.Placement="Top" hc:Poptip.Content="+21.67%" Margin="0,100,310,0" Grid.RowSpan="6" CornerRadius="16" Background="White" Effect="{StaticResource EffectShadow3}" Width="25" Height="25" HorizontalAlignment="Center">
                                     <Ellipse Width="10" Height="10" Fill="#4E4DB0"/>
                                 </Border>
 
