@@ -138,17 +138,17 @@
                 <TextBlock Text="New files" HorizontalAlignment="Left" Margin="60,300,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
 
                 <Button Width="90" IsEnabled="False" Foreground="{DynamicResource ThirdlyTextBrush}" FontWeight="Bold" hc:BorderElement.CornerRadius="16" BorderBrush="{DynamicResource ThirdlyTextBrush}" BorderThickness="2"
-                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,300,67,0" Content="VIEW ALL"/>
+                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,300,120,0" Content="VIEW ALL"/>
 
-                <local:DriveStorageListBoxItem Margin="0,350,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+                <local:DriveStorageListBoxItem Margin="5,350,5,0" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
 
                 <TextBlock Text="Shared with me" HorizontalAlignment="Left" Margin="60,570,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
 
                 <Button Width="90" IsEnabled="False" Foreground="{DynamicResource ThirdlyTextBrush}" FontWeight="Bold" hc:BorderElement.CornerRadius="16" BorderBrush="{DynamicResource ThirdlyTextBrush}" BorderThickness="2"
-                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,570,67,0" Content="VIEW ALL"/>
+                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,570,120,0" Content="VIEW ALL"/>
 
-                <StackPanel CanHorizontallyScroll="True" Orientation="Horizontal" Margin="58,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
-                    <hc:Card hc:BorderElement.CornerRadius="16" Width="120" Height="140">
+                <StackPanel CanHorizontallyScroll="True" Orientation="Horizontal" Margin="10,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                    <hc:Card hc:BorderElement.CornerRadius="16" Width="110" Height="140">
                         <StackPanel Margin="10">
                             <Path HorizontalAlignment="Left" Height="60" Width="60" Data="{DynamicResource PdfGeometry}" Fill="Red"/>
                             <TextBlock Margin="0,20,0,0" FontWeight="DemiBold" FontSize="14">
@@ -157,7 +157,7 @@
                         </StackPanel>
                     </hc:Card>
 
-                    <hc:Card Margin="10,0" hc:BorderElement.CornerRadius="16" Width="120" Height="140">
+                    <hc:Card Margin="10,0" hc:BorderElement.CornerRadius="16" Width="110" Height="140">
                         <StackPanel Margin="10">
                             <Path HorizontalAlignment="Left" Height="60" Width="60" Data="{DynamicResource PngGeometry}" Fill="CadetBlue"/>
                             <TextBlock Margin="0,20,0,0" FontWeight="DemiBold" FontSize="14">
@@ -203,7 +203,51 @@
                     </hc:Card>
                 </StackPanel>
             </Grid>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="2" Margin="15">
+                <hc:SearchBar Padding="10,0,0,0" VerticalContentAlignment="Center" Style="{StaticResource SearchBarExtend}" hc:InfoElement.Placeholder="SEARCH YOUR CONTENT" FontSize="10" FontWeight="SemiBold" Background="#EFF2F8" Foreground="#C2C3C3" BorderThickness="0"/>
+                <TextBlock Text="Statistics" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,30,0,0" FontSize="18" FontWeight="SemiBold"/>
 
+                <hc:Card Height="100" Margin="0,20,0,10" Effect="{StaticResource EffectShadow4}" hc:BorderElement.CornerRadius="16">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center">
+                            Downloads<LineBreak/>this week
+                        </TextBlock>
+
+                        <hc:CircleProgressBar Margin="10,0" ArcThickness="2" FontWeight="DemiBold" Value="69" Foreground="#6D78CB" Height="50" Width="50"/>
+                        <TextBlock HorizontalAlignment="Right" FontSize="14"  VerticalAlignment="Center" Text="perday"/>
+
+                    </StackPanel>
+                </hc:Card>
+
+                <hc:Card Height="100" Margin="0,10" Effect="{StaticResource EffectShadow4}" hc:BorderElement.CornerRadius="16">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center">
+                            Available<LineBreak/>Space
+                        </TextBlock>
+
+                        <hc:CircleProgressBar Margin="10,0" ArcThickness="2" FontWeight="DemiBold" Value="12" Foreground="#6D78CB" Height="50" Width="50"/>
+                        <TextBlock HorizontalAlignment="Right" FontSize="14"  VerticalAlignment="Center" Text="gb left"/>
+
+                    </StackPanel>
+                </hc:Card>
+
+                <hc:Card Height="100" Margin="0,10" Effect="{StaticResource EffectShadow4}" hc:BorderElement.CornerRadius="16">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Left" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center">
+                            Shared<LineBreak/>files
+                        </TextBlock>
+
+                        <hc:CircleProgressBar Margin="10,0" ArcThickness="2" FontWeight="DemiBold" Value="49" Foreground="#6D78CB" Height="50" Width="50"/>
+                        <TextBlock HorizontalAlignment="Right" FontSize="14"  VerticalAlignment="Center" Text="today"/>
+
+                    </StackPanel>
+                </hc:Card>
+
+                <Image Source="/Resources/Img/morestorage.png" VerticalAlignment="Bottom" Margin="35,0"/>
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" FontWeight="SemiBold">Unlock more storage now!<Run/><LineBreak/><Run FontSize="15" Foreground="DimGray" Text="Upgrade to Drive Plus."/></TextBlock>
+                <Button Margin="0,10,0,0" Content="UPGRADE NOW" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#6A75CA" Style="{StaticResource ButtonViolet}" Width="160" Foreground="White" hc:BorderElement.CornerRadius="16" Effect="{StaticResource EffectShadow3}"/>
+
+            </StackPanel>
         </Grid>
     </Border>
 </UserControl>
