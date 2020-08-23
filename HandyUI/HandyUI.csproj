@@ -31,6 +31,7 @@
     <None Remove="Resources\Album\7.jpg" />
     <None Remove="Resources\Album\8.jpg" />
     <None Remove="Resources\Album\9.jpg" />
+    <None Remove="Resources\Img\profile1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="HandyControls" Version="2.5.3.2" />
@@ -54,5 +55,6 @@
     <Resource Include="Resources\Album\7.jpg" />
     <Resource Include="Resources\Album\8.jpg" />
     <Resource Include="Resources\Album\9.jpg" />
+    <Resource Include="Resources\Img\profile1.jpg" />
   </ItemGroup>
 </Project>
