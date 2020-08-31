@@ -50,7 +50,8 @@
             <ListBoxItem Tag="MusicPlayer" Margin="10,0" Content="Music Player"/>
             <ListBoxItem Tag="Login" Margin="10,0" Content="Login"/>
             <ListBoxItem Tag="WeatherAnalysis" Margin="10,0" Content="Weather Analysis"/>
-            <ListBoxItem Tag="DriveStorage" hc:ListBoxAttach.IsNew="True" Margin="10,0" Content="Drive Storage"/>
+            <ListBoxItem Tag="DriveStorage" Margin="10,0" Content="Drive Storage"/>
+            <ListBoxItem Tag="FileManager" hc:ListBoxAttach.IsNew="True" Margin="10,0" Content="File Manager"/>
             <hc:Interaction.Triggers>
                 <hc:EventTrigger EventName="SelectionChanged">
                     <hc:EventToCommand Command="{Binding SwitchItemCommand}" PassEventArgsToCommand="True"/>

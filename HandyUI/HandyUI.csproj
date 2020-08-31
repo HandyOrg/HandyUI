@@ -31,8 +31,14 @@
     <None Remove="Resources\Album\7.jpg" />
     <None Remove="Resources\Album\8.jpg" />
     <None Remove="Resources\Album\9.jpg" />
+    <None Remove="Resources\Img\applogoexample.png" />
+    <None Remove="Resources\Img\cloud.png" />
+    <None Remove="Resources\Img\contacts.png" />
+    <None Remove="Resources\Img\mmc.png" />
     <None Remove="Resources\Img\morestorage.png" />
     <None Remove="Resources\Img\profile1.jpg" />
+    <None Remove="Resources\Img\settings.png" />
+    <None Remove="Resources\Img\sms.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="HandyControls" Version="2.5.3.2" />
@@ -56,7 +62,13 @@
     <Resource Include="Resources\Album\7.jpg" />
     <Resource Include="Resources\Album\8.jpg" />
     <Resource Include="Resources\Album\9.jpg" />
+    <Resource Include="Resources\Img\applogoexample.png" />
+    <Resource Include="Resources\Img\cloud.png" />
+    <Resource Include="Resources\Img\contacts.png" />
+    <Resource Include="Resources\Img\mmc.png" />
     <Resource Include="Resources\Img\morestorage.png" />
     <Resource Include="Resources\Img\profile1.jpg" />
+    <Resource Include="Resources\Img\settings.png" />
+    <Resource Include="Resources\Img\sms.png" />
   </ItemGroup>
 </Project>

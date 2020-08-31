@@ -31,6 +31,7 @@ namespace HandyUI
             containerRegistry.RegisterForNavigation<Login>();
             containerRegistry.RegisterForNavigation<WeatherAnalysis>();
             containerRegistry.RegisterForNavigation<DriveStorage>();
+            containerRegistry.RegisterForNavigation<FileManager>();
         }
         internal void UpdateSkin(SkinType skin)
         {
