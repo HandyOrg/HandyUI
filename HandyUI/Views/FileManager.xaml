@@ -99,16 +99,157 @@
                             <Border Grid.Column="1" Grid.RowSpan="3" Background="Transparent">
                                 <Border Background="#F3F6F9" CornerRadius="20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                     <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="350"/>
-                                        </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="100"/>
+                                            <RowDefinition Height="60"/>
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
-                                        
-                                        
+                                        <StackPanel Orientation="Horizontal">
+                                            <hc:SearchBar Style="{StaticResource SearchBarExtend}" Height="35" Width="250" Margin="10,0" hc:InfoElement.Placeholder="Search Something..."/>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Background="Transparent" BorderThickness="0">
+                                                    <Image Source="{DynamicResource bell}"/>
+                                                </Button>
+                                                <TextBlock Text="Hi, Jd's Code Lab" FontSize="15" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkSlateGray" Margin="15,0,0,0"/>
+                                                <StackPanel Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <Button Background="Transparent" BorderThickness="0">
+                                                        <Image Width="16" Height="16" Source="{DynamicResource code}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Jd's Code Lab" FontSize="9" Foreground="DarkSlateGray" Margin="0,0,0,0"/>
+                                                </StackPanel>
+                                                <hc:Shield Margin="170,0" Color="{DynamicResource DangerBrush}" Subject="Designer" Status="jdscodelab" Cursor="Hand" hc:Command="hc:ControlCommands.OpenLink" CommandParameter="https://github.com/jdscodelab/File-Manager-UI-Wpf"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <StackPanel Grid.Row="1">
+                                            <StackPanel Margin="10,0" Orientation="Horizontal">
+                                                <hc:Card hc:BorderElement.CornerRadius="16" Width="260" Height="125">
+                                                    <Grid>
+                                                        <StackPanel Margin="10">
+                                                            <Button Margin="10,0" HorizontalAlignment="Left" BorderThickness="0">
+                                                                <Image Source="{DynamicResource dropbox}"/>
+                                                            </Button>
+                                                            <TextBlock Margin="10,20,0,0" FontWeight="Bold" FontSize="20" Text="DropBox"/>
+                                                            <TextBlock Margin="10,0,0,0" FontWeight="DemiBold" Foreground="Gray" FontSize="15" Text="67 GB / 128 GB"/>
+
+                                                        </StackPanel>
+                                                        <hc:CircleProgressBar HorizontalAlignment="Right" Margin="20,10,20,0" Value="56" Text="56%" Width="60" Height="60"/>
+                                                    </Grid>
+                                                </hc:Card>
+
+                                                <hc:Card Margin="10,0" hc:BorderElement.CornerRadius="16" Width="260" Height="125">
+                                                    <Grid>
+                                                        <StackPanel Margin="10">
+                                                            <Button Margin="10,0" HorizontalAlignment="Left" BorderThickness="0">
+                                                                <Image Source="{DynamicResource google_drive}"/>
+                                                            </Button>
+                                                            <TextBlock Margin="10,20,0,0" FontWeight="Bold" FontSize="20" Text="Google Drive"/>
+                                                            <TextBlock Margin="10,0,0,0" FontWeight="DemiBold" Foreground="Gray" FontSize="15" Text="83 GB / 512 GB"/>
+
+                                                        </StackPanel>
+                                                        <hc:CircleProgressBar HorizontalAlignment="Right" Margin="20,10,20,0" Value="11" Text="11%" Width="60" Height="60"/>
+                                                    </Grid>
+                                                </hc:Card>
+
+                                                <hc:Card hc:BorderElement.CornerRadius="16" Width="260" Height="125">
+                                                    <Grid>
+                                                        <StackPanel Margin="10">
+                                                            <Button Margin="10,0" HorizontalAlignment="Left" BorderThickness="0">
+                                                                <Image Source="{DynamicResource onedrive}"/>
+                                                            </Button>
+                                                            <TextBlock Margin="10,20,0,0" FontWeight="Bold" FontSize="20" Text="One Drive"/>
+                                                            <TextBlock Margin="10,0,0,0" FontWeight="DemiBold" Foreground="Gray" FontSize="15" Text="124 GB / 256 GB"/>
+
+                                                        </StackPanel>
+                                                        <hc:CircleProgressBar HorizontalAlignment="Right" Margin="20,10,20,0" Value="62" Text="62%" Width="60" Height="60"/>
+                                                    </Grid>
+                                                </hc:Card>
+                                            </StackPanel>
+                                            <TextBlock Text="Quick Access" FontWeight="Bold" Foreground="DarkSlateGray" Margin="15,10,0,0" FontSize="24"/>
+                                            <StackPanel Orientation="Horizontal">
+                                                <StackPanel Margin="10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource image}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Images" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+                                                <StackPanel Margin="0,10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource video}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Videos" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+
+                                                <StackPanel Margin="10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource music}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Music" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+
+                                                <StackPanel Margin="0,10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource apps}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Apps" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+
+                                                <StackPanel Margin="10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource zip}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Zip Files" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+
+                                                <StackPanel Margin="0,10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource document}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Documents" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+
+                                                <StackPanel Margin="10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource downloads}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Downloads" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="10,10,0,0"/>
+
+                                                </StackPanel>
+                                                <StackPanel Margin="0,10">
+                                                    <Button hc:BorderElement.CornerRadius="16" Width="70" Height="70" Background="White" BorderThickness="0">
+                                                        <Image Width="36" Height="36" Source="{DynamicResource plus}"/>
+                                                    </Button>
+                                                    <TextBlock Text="Add" FontSize="16" VerticalAlignment="Center" FontWeight="DemiBold" Foreground="DarkSlateGray" Margin="20,10,0,0"/>
+
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <TextBlock Text="My Files" FontWeight="Bold" Foreground="DarkSlateGray" VerticalAlignment="Center" Margin="15,10,0,0" FontSize="24"/>
+                                            <TextBlock Text="See all" FontWeight="SemiBold" HorizontalAlignment="Right" VerticalAlignment="Center" TextAlignment="Right" Foreground="#FF37A0EA" Margin="0,-25,15,0" FontSize="19"/>
+
+                                            <Border Background="White" CornerRadius="16" Margin="10">
+                                                <ListView Background="Transparent" BorderThickness="0" ItemsSource="{Binding data}">
+                                                    <ListView.View>
+                                                        <GridView>
+                                                            <GridViewColumn>
+                                                                <GridViewColumn.CellTemplate>
+                                                                    <DataTemplate>
+                                                                        <Image Source="{Binding Image}" />
+                                                                    </DataTemplate>
+                                                                </GridViewColumn.CellTemplate>
+                                                            </GridViewColumn>
+                                                            <GridViewColumn Header="Name" Width="300" DisplayMemberBinding="{Binding Name}" />
+                                                            <GridViewColumn Header="File Item" Width="150" DisplayMemberBinding="{Binding FileItem}" />
+                                                            <GridViewColumn Header="Last Modified" Width="150" DisplayMemberBinding="{Binding LastModified}" />
+                                                            <GridViewColumn Header="File Size" Width="150" DisplayMemberBinding="{Binding FileSize}" />
+                                                        </GridView>
+                                                    </ListView.View>
+                                                </ListView>
+                                            </Border>
+                                        </StackPanel>
                                     </Grid>
                                 </Border>
                             </Border>
